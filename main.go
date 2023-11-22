@@ -15,7 +15,7 @@ func main() {
 	// use the http.NewServerMux() function to initialize a new new servemux, then
 	// register the home function as the handler for the "/" URL pattern.
 	mux := http.NewServeMux()
-
+	mux.HandleFunc("/", home)
 	// use the http.HandleFunc() function to register the home() as the handler
 	// Two parameters: the tcp network address to listen on (in this case ":4000")
 	// and the servemux we just created. If http.ListenAndServe() returns an error
